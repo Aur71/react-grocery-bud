@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 import Item from './Item';
 import Alert from './Alert';
 
@@ -19,7 +19,7 @@ const App = () => {
   };
 
   const removeItem = (id) => {
-    setList(list.filter((item, index) => index != id));
+    setList(list.filter((item, index) => index !== id));
     showAlert(true, 'red', 'Item removed');
   };
 
